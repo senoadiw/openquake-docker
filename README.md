@@ -29,7 +29,7 @@ docker compose -f docker-compose.prod.yml logs -f
 # access OpenQuake at the configured domain (example: https://oq.domain.com)
 
 # to access oq command
-docker compose -f .\docker-compose.dev.yml exec -it openquake-engine /bin/bash
+docker compose -f docker-compose.prod.yml exec -it openquake-engine /bin/bash
 oq --version
 
 # done!
