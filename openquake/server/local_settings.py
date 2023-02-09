@@ -1,0 +1,2 @@
+LOCKDOWN = True
+DEBUG = False
