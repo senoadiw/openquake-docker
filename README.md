@@ -30,6 +30,15 @@ docker compose -f docker-compose.dev.yml logs -f
 docker compose -f docker-compose.dev.yml exec -it openquake-engine /bin/bash
 oq --version
 
+# to stop the container
+docker compose -f docker-compose.dev.yml stop
+
+# to start the container
+docker compose -f docker-compose.dev.yml start
+
+# to delete the container (and all calculation data!)
+docker compose -f docker-compose.dev.yml down
+
 # done!
 ```
 
@@ -59,6 +68,15 @@ docker compose -f docker-compose.prod.yml logs -f
 # to access oq command
 docker compose -f docker-compose.prod.yml exec -it openquake-engine /bin/bash
 oq --version
+
+# to stop the container
+docker compose -f docker-compose.prod.yml stop
+
+# to start the container
+docker compose -f docker-compose.prod.yml start
+
+# to delete the container (and all calculation data!)
+docker compose -f docker-compose.prod.yml down
 
 # done!
 ```
