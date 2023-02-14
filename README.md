@@ -23,7 +23,7 @@ docker compose -f docker-compose.dev.yml up -d
 # check the logs and wait a few minutes for the containers to initialize
 docker compose -f docker-compose.dev.yml logs -f
 
-# access OpenQuake at http://localhost:8080 or http://the.server.ip.address:8080
+# access OpenQuake at http://localhost:8800 or http://the.server.ip.address:8800
 
 # login with the admin user details in .env.dev
 
