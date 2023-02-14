@@ -1,5 +1,5 @@
 # openquake-docker
-Run OpenQuake on Docker with auto generated Let's Encrypt SSL certificate.
+Run OpenQuake LTS (v3.16 as of February 2023) on Docker with auto generated Let's Encrypt SSL certificate.
 
 ## Requirements
 * Docker (and Docker Compose) installed
