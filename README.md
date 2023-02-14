@@ -3,6 +3,7 @@ Run OpenQuake LTS (v3.16 as of February 2023) on Docker with auto generated Let'
 
 ## Requirements
 * Docker (and Docker Compose) installed
+  * for Windows 10 up install Docker Desktop: https://docs.docker.com/desktop/install/windows-install/
 * for Linux: the user must belong the docker group
   * `sudo usermod -aG docker ${USER}`
 * for production: a domain name pointed to the target server's IP address
