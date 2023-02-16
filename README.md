@@ -1,6 +1,11 @@
 # openquake-docker
 Run OpenQuake LTS (v3.16 as of February 2023) on Docker with auto generated Let's Encrypt SSL certificate.
 
+Based on the following Docker images:
+* https://github.com/gem/oq-engine/tree/master/docker
+* https://github.com/nginx-proxy/nginx-proxy
+* https://github.com/nginx-proxy/acme-companion
+
 ## Requirements
 * Docker (and Docker Compose) installed
   * for Windows 10 up install Docker Desktop: https://docs.docker.com/desktop/install/windows-install/
