@@ -59,6 +59,7 @@ cp .env.prod.sample .env.prod
 
 # edit OQ_ADMIN_LOGIN, OQ_ADMIN_PASSWORD, OQ_ADMIN_EMAIL, VIRTUAL_HOST,
 # LETSENCRYPT_HOST, and LETSENCRYPT_EMAIL in .env.prod
+# optional: uncomment and edit WEBUI_PATHPREFIX (will change URL from https://oq.domain.com/engine to https://oq.domain.com/WEBUI_PATHPREFIX/engine)
 nano .env.prod
 
 # bring up the containers
