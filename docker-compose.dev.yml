@@ -2,7 +2,8 @@ version: '3.9'
 
 services:
   openquake-engine:
-    image: openquake/engine:LTS
+    # image: openquake/engine:LTS
+    image: openquake/engine:3.16
     ports:
       - 8800:8800
     env_file:

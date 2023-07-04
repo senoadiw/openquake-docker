@@ -26,7 +26,8 @@ services:
     depends_on:
       - nginx-proxy
   openquake-engine:
-    image: openquake/engine:LTS
+    # image: openquake/engine:LTS
+    image: openquake/engine:3.16
     # restart: always # uncomment to start container on server boot
     # ports:
     #   - 8800:8800 # openquake/engine by default EXPOSEs 8800

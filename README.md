@@ -28,6 +28,9 @@ docker compose -f docker-compose.dev.yml up -d
 # check the logs and wait a few minutes for the containers to initialize
 docker compose -f docker-compose.dev.yml logs -f
 
+# check the container status
+docker ps
+
 # access OpenQuake at http://localhost:8800 or http://the.server.ip.address:8800
 
 # login with the admin user details in .env.dev
@@ -35,6 +38,9 @@ docker compose -f docker-compose.dev.yml logs -f
 # to access oq command
 docker compose -f docker-compose.dev.yml exec -it openquake-engine /bin/bash
 oq --version
+
+# to view the container logs
+docker compose -f docker-compose.dev.yml logs openquake-engine -f
 
 # to stop the container
 docker compose -f docker-compose.dev.yml stop
@@ -44,6 +50,16 @@ docker compose -f docker-compose.dev.yml start
 
 # to delete the container (and all calculation data!)
 docker compose -f docker-compose.dev.yml down
+
+# the OpenQuake version is fixed to 3.16 (https://hub.docker.com/r/openquake/engine/tags?page=1&name=3.16)
+# do the following to pull image version 3.16.x with the latest updates:
+docker compose -f docker-compose.dev.yml stop
+# list the images
+docker images
+# force delete the openquake/engine image by image id abcdefghijkl (example)
+docker rmi -f abcdefghijkl
+# pull the latest image
+docker compose -f docker-compose.dev.yml up -d
 
 # done!
 ```
