@@ -73,10 +73,15 @@ cd openquake-docker
 # for production installation, copy the sample environment files
 cp .env.prod.sample .env.prod
 
-# edit OQ_ADMIN_LOGIN, OQ_ADMIN_PASSWORD, OQ_ADMIN_EMAIL, VIRTUAL_HOST,
-# LETSENCRYPT_HOST, and LETSENCRYPT_EMAIL in .env.prod
-# optional: uncomment and edit WEBUI_PATHPREFIX (will change URL from https://oq.domain.com/engine to https://oq.domain.com/WEBUI_PATHPREFIX/engine)
+# configure openquake environment variables
 nano .env.prod
+  # edit OQ_ADMIN_LOGIN, OQ_ADMIN_PASSWORD, OQ_ADMIN_EMAIL, VIRTUAL_HOST,
+  # LETSENCRYPT_HOST, and LETSENCRYPT_EMAIL in .env.prod
+  # optional: uncomment and edit WEBUI_PATHPREFIX (will change URL from https://oq.domain.com/engine to https://oq.domain.com/WEBUI_PATHPREFIX/engine)
+
+# optional: configure openquake container to always start on server boot
+nano docker-compose.prod.yml
+  # uncomment "restart: always" below "image: openquake/engine:3.16"
 
 # bring up the containers
 docker compose -f docker-compose.prod.yml up -d
