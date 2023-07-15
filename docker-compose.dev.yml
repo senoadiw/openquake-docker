@@ -9,4 +9,5 @@ services:
     env_file:
       - ./.env.dev
     # volumes:
+    #   - ./openquake/openquake.cfg:/opt/openquake/openquake.cfg:ro
     #   - ./openquake/server/local_settings.py:/home/openquake/local_settings.py:ro
